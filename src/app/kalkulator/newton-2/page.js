@@ -26,7 +26,7 @@ export default function Page() {
             <div className="flex flex-col items-center w-full justify-center min-h-[85dvh] p-10 gap-y-5 max-w-5xl">
                 <div className="flex w-full gap-x-5">
                     <div className="flex w-full py-5 pl-8 text-xl font-bold bg-gray-200 rounded-xl">Hukum Newton 2</div>
-                    <LinkNextPage href={"/kalkulator/newton-3"} children={"Hukum Newton 3"} />
+                    <LinkNextPage href={"/kalkulator/newton-3"} name={"Hukum Newton 3"} />
                 </div>
                 <div className="flex w-full gap-x-5">
                     <div className="flex flex-col w-2/3 px-8 py-5 text-lg font-semibold bg-gray-200 gap-y-8 rounded-xl">

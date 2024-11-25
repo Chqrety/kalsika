@@ -1,5 +1,6 @@
 "use client"
 
+import LinkNextPage from "@/components/LinkNextPage"
 import Navbar from "@/components/Navbar"
 import { Button, Input, Select, SelectItem } from "@nextui-org/react"
 import Link from "next/link"
@@ -31,9 +32,7 @@ export default function Page() {
             <div className="flex flex-col items-center w-full justify-center min-h-[85dvh] p-10 gap-y-5 max-w-5xl">
                 <div className="flex w-full gap-x-5">
                     <div className="flex w-full py-5 pl-8 text-xl font-bold bg-gray-200 rounded-xl">Gaya Gesek</div>
-                    <div className="flex items-center justify-center w-56 px-5 italic bg-gray-200 rounded-xl">
-                        <Link href="/kalkulator/potensial">Gaya Potensial &gt;</Link>
-                    </div>
+                    <LinkNextPage href={"/kalkulator/potensial"} name={"Gaya Potensial"} />
                 </div>
                 <div className="flex w-full gap-x-5">
                     <div className="flex flex-col w-2/3 px-8 py-5 text-lg font-semibold bg-gray-200 gap-y-8 rounded-xl">
