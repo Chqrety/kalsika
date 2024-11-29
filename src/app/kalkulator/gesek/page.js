@@ -3,12 +3,11 @@
 import LinkNextPage from "@/components/LinkNextPage"
 import Navbar from "@/components/Navbar"
 import { Button, Input, Select, SelectItem } from "@nextui-org/react"
-import Link from "next/link"
 import React, { useState } from "react"
 
 const gravitations = [
-    { key: "9,8", label: "9,8" },
-    { key: "10", label: "10" },
+    { key: 9.8, label: "9,8 m/s²" },
+    { key: 10, label: "10 m/s²" },
 ]
 
 export default function Page() {
@@ -19,9 +18,7 @@ export default function Page() {
 
     const hitungGesek = () => {
         if (massa !== null && koefisien !== null && gravitasi !== null) {
-            const parseGravitasi = parseFloat(gravitasi.replace(",", "."))
-            console.log(koefisien, massa, parseGravitasi)
-            const gaya = koefisien * (massa * parseGravitasi)
+            const gaya = koefisien * (massa * gravitasi)
 
             setHasil(gaya.toFixed(2))
         }
@@ -34,8 +31,8 @@ export default function Page() {
                     <div className="flex w-full py-5 pl-8 text-xl font-bold bg-gray-200 rounded-xl">Gaya Gesek</div>
                     <LinkNextPage href={"/kalkulator/potensial"} name={"Gaya Potensial"} />
                 </div>
-                <div className="flex w-full gap-x-5">
-                    <div className="flex flex-col w-2/3 px-8 py-5 text-lg font-semibold bg-gray-200 gap-y-8 rounded-xl">
+                <div className="flex flex-col w-full h-full gap-5 lg:flex-row">
+                    <div className="flex flex-col w-full px-8 py-5 text-lg font-semibold bg-gray-200 lg:w-2/3 gap-y-8 rounded-xl">
                         <p>Isi Sendiri Ya Ndes!!</p>
                         <div className="flex flex-col max-w-lg gap-y-5">
                             <Input
@@ -49,11 +46,7 @@ export default function Page() {
                                 type="number"
                                 onChange={(e) => setKoefisien(parseFloat(e.target.value))}
                             />
-                            <Select
-                                label="Mo gravitasi brapa?"
-                                onChange={(e) => setGravitasi(e.target.value)}
-                                endContent={<p className="text-sm text-gray-400">m/s&sup2;</p>}
-                            >
+                            <Select label="Mo gravitasi brapa?" onChange={(e) => setGravitasi(e.target.value)}>
                                 {gravitations.map((gravitation) => (
                                     <SelectItem key={gravitation.key}>{gravitation.label}</SelectItem>
                                 ))}
@@ -65,7 +58,7 @@ export default function Page() {
                             </Button>
                         </div>
                     </div>
-                    <div className="flex flex-col items-center justify-center w-1/3 bg-gray-200 rounded-xl">
+                    <div className="flex flex-col items-center justify-center w-full h-16 bg-gray-200 lg:h-auto lg:w-1/3 rounded-xl">
                         {hasil ? (
                             <>
                                 <p className="text-base font-bold md:text-2xl lg:text-5xl">
