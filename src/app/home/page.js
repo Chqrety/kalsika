@@ -29,7 +29,7 @@ export default function Page() {
                 <div className="flex flex-col items-center pt-4 border-t border-gray-200">
                     <p className="font-semibold uppercase">Kelompok Pertamax</p>
                     <div className="flex gap-3 text-xs italic text-gray-500 md:text-sm">
-                        <p>El Jomok - 15769</p>
+                        <p>Rafael - 15769</p>
                         <p>Husnul - 15776</p>
                         <p>Brillian - 15794</p>
                         <p>Ahmad - 15773</p>
