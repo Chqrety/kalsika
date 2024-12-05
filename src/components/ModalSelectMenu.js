@@ -16,7 +16,7 @@ export default function ModalSelectMenu() {
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Mau make apa?</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1">Pilih kalkulator?</ModalHeader>
                             <ModalBody>
                                 <div className="grid grid-cols-4 gap-4">
                                     <Button

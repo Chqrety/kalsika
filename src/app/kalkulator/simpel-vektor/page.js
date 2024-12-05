@@ -3,7 +3,6 @@
 import LinkNextPage from "@/components/LinkNextPage"
 import Navbar from "@/components/Navbar"
 import { Button, Input } from "@nextui-org/react"
-import Link from "next/link"
 import React, { useState } from "react"
 
 export default function Page() {
@@ -39,7 +38,7 @@ export default function Page() {
                 </div>
                 <div className="flex flex-col w-full h-full gap-5 lg:flex-row">
                     <div className="flex flex-col w-full px-8 py-5 text-lg font-semibold bg-gray-200 lg:w-2/3 gap-y-8 rounded-xl">
-                        <p>Isi Sendiri Ya Ndes!!</p>
+                        <p>Masukkan nilai yang dibutuhkan!!</p>
                         <div className="flex flex-col max-w-lg gap-y-5">
                             <Input
                                 label="F (Gaya)"
@@ -57,7 +56,7 @@ export default function Page() {
                         </div>
                         <div className="flex justify-end">
                             <Button color="primary" className="bg-black" onClick={hitungVektor}>
-                                <p className="font-bold">Wess</p>
+                                <p className="font-bold">Cari</p>
                             </Button>
                         </div>
                     </div>
@@ -72,7 +71,7 @@ export default function Page() {
                                 </p>
                             </>
                         ) : (
-                            <p className="text-sm font-semibold md:text-base lg:text-xl">Hasil ntar disini</p>
+                            <p className="text-sm font-semibold md:text-base lg:text-xl">...</p>
                         )}
                     </div>
                 </div>
