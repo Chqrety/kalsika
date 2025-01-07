@@ -1,7 +1,15 @@
 "use client"
 
 import React from "react"
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react"
+import {
+    Modal,
+    ModalContent,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    Button,
+    useDisclosure,
+} from "@nextui-org/react"
 import Link from "next/link"
 
 export default function ModalSelectMenu() {
@@ -9,14 +17,26 @@ export default function ModalSelectMenu() {
 
     return (
         <>
-            <Button onPress={onOpen} className="font-semibold bg-black" color="primary" size="lg">
+            <Button
+                onPress={onOpen}
+                className="font-semibold bg-black"
+                color="primary"
+                size="lg"
+            >
                 Kalkulator
             </Button>
-            <Modal backdrop="blur" isOpen={isOpen} onOpenChange={onOpenChange} size="2xl">
+            <Modal
+                backdrop="blur"
+                isOpen={isOpen}
+                onOpenChange={onOpenChange}
+                size="2xl"
+            >
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Pilih kalkulator?</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1">
+                                Pilih kalkulator
+                            </ModalHeader>
                             <ModalBody>
                                 <div className="grid grid-cols-4 gap-4">
                                     <Button
@@ -71,8 +91,12 @@ export default function ModalSelectMenu() {
                                 </div>
                             </ModalBody>
                             <ModalFooter>
-                                <Button color="danger" variant="light" onPress={onClose}>
-                                    Ga Jadi
+                                <Button
+                                    color="danger"
+                                    variant="light"
+                                    onPress={onClose}
+                                >
+                                    Batal
                                 </Button>
                             </ModalFooter>
                         </>
