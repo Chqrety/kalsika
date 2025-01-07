@@ -12,9 +12,9 @@ import React, { Children, useState } from "react"
 
 export const answers = [
     { key: 1, label: "Resultan Gaya" },
-    { key: 2, label: "Massa" },
-    { key: 3, label: "Gaya" },
-    { key: 4, label: "Percepatan" },
+    { key: 2, label: "Percepatan" },
+    { key: 3, label: "Massa" },
+    { key: 4, label: "Gaya" },
 ]
 
 export default function Page() {
@@ -61,7 +61,7 @@ export default function Page() {
     const hitungGaya = () => {
         if (percepatan && massa && activeMenu === 4) {
             const gaya = massa * percepatan
-            setHasil(`${gaya.toFixed(2)} kg`)
+            setHasil(`${gaya.toFixed(2)} F`)
         }
     }
 
